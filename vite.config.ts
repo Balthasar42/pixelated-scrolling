@@ -1,6 +1,7 @@
 import path from "node:path"
 import { defineConfig } from "vite"
 import vue from "@vitejs/plugin-vue"
+import Unfonts from "unplugin-fonts/vite"
 
 export default defineConfig({
   resolve: {
@@ -10,5 +11,10 @@ export default defineConfig({
   },
   plugins: [
     vue(),
+    Unfonts({
+      google: {
+        families: ["Outfit", "Neuton"],
+      },
+    }),
   ],
 })
